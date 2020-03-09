@@ -5,7 +5,7 @@
         <title>Aula03 - Formulários</title>
     </head>
     <body>
-        <form  action="salvar.php" method="GET" >
+        <form  action="salvar.php" method="GET" enctype="multipart/form-data" >
             Nome: <input type="text" name="txtNome" id="txtNome" 
                          required maxlength="50" />  <br>
             <label for="txtAltura">Altura:</label>
@@ -15,11 +15,42 @@
             <input type="date" name="txtNascimento" 
                    min="1900-01-01" max="2002-03-02" 
                    value="2002-03-02" /> <br>
+            
+            <label for="idade">Idade: </label>
+            <input type="range" name="idade" min="0" max="130" /> <br>
+            
             <label for="txtEmail">E-mail:</label>
             <input type="email" name="txtEmail" /> <br>
             <label for="txtSexo">Sexo:</label>
             <input type="radio" name="txtSexo" value="f" checked />Feminino
             <input type="radio" name="txtSexo" value="m" />Masculino <br>
+            
+            <label for="cidade">Cidade: </label>
+            <select name="cidade">
+                <option value="0">Selecione...</option>
+                <optgroup label="RS">
+                    <option value="3">Alvorada</option>
+                    <option value="10">Canoas</option>
+                    <option value="1">Porto Alegre</option>
+                </optgroup>
+                <optgroup label="SC">
+                    <option value="2">Florianópolis</option>
+                    <option value="7">Praia Grande</option>
+                    <option value="100">Passo de Torres</option>
+                </optgroup>
+                
+            </select>  <br>
+            <label for="foto">Foto: </label>
+            <input type="file" name="foto" /> <br>
+            
+            <label for="obs">Obs: </label> <br>
+            <textarea name="obs" rows="10" cols="15"></textarea> <br>
+            
+            <input type="checkbox" name="aceitaEmail" checked />
+            <label for="aceitaEmail"> Aceita receber e-mail</label> <br>
+            
+            <input type="submit" value="Salvar" />
+            <input type="reset" value="Limpar" />
             
         </form>
     </body>
